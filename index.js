@@ -3,8 +3,8 @@ const app = express()
 
 app.get('/', (req, res) => res.send('Hello from openshift'))
 
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
-	ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
+const ip = process.env.IP  || '0.0.0.0'
+const port = process.env.PORT || 8080
 	
 app.listen(port, ip)
-console.log('Server running on http://%s:%s', ip, port);
+console.log('Server running on ' + ip + ':' + port);
