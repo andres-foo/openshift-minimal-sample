@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/andres-foo/nodeshifttest.git"
+    "url": "https://github.com/andres-foo/openshift-minimal-sample.git"
   },
   "author": "",
   "license": "ISC",
