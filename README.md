@@ -1,7 +1,6 @@
 # Nodeshift minimal express app
 
-This is an example of a minimal app for deployment on Red Hat OpenShift following the information from:
-https://www.openshift.com/blog/run-your-nodejs-projects-on-openshift-in-two-simple-steps
+This is an example of a minimal nodejs(with expressjs) app for deployment on Red Hat OpenShift
 
 ## How to deploy to openshift
 You can deploy directly from github to openshift on a personal (free) account or even on the playground without any registration as a way to try it.
@@ -37,7 +36,7 @@ WARNING: The playground app will only work for a limited amount of time
 
 ## Important elements
 
-As seen on the link provided, in your _package.json_ make sure to include:
+Include in your in your _package.json_ the following:
 ```javascript
 "main": "index.js",
 "scripts": {
@@ -46,8 +45,8 @@ As seen on the link provided, in your _package.json_ make sure to include:
 ```
 replace _index.js_ with your entry file
   
- Also, check for the enviromental variables provided by openshift:
+ Use the following default values for port and ip:
  ```js
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
-       ip = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
+const ip = process.env.IP  || '0.0.0.0'
+const port = process.env.PORT || 8080
  ```
